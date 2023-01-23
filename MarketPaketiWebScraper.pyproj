@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cd205f01-1207-4773-a6bf-131e37cb0855</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Startup.py</StartupFile>
+    <StartupFile>MarketWebScraping\Startup.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,7 @@
     <Name>MarketPaketiWebScraper</Name>
     <RootNamespace>MarketPaketiWebScraper</RootNamespace>
     <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,39 +23,37 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BusinessServices\BusinessService.py" />
-    <Compile Include="DataRepository\BaseRepository.py" />
-    <Compile Include="DataRepository\DataServices.py" />
-    <Compile Include="DataSet\DataSet.py" />
-    <Compile Include="FileServices\FileServices.py" />
-    <Compile Include="Helpers\DataHelper.py" />
-    <Compile Include="Helpers\SMTPMailHelper.py" />
-    <Compile Include="Helpers\StringHelper.py" />
-    <Compile Include="Logger\LogManager.py" />
-    <Compile Include="Models\HtmlResponse.py" />
-    <Compile Include="Models\ProductDetailDto.py" />
-    <Compile Include="Models\ProductListItemUrlsDto.py" />
-    <Compile Include="Models\ProductUrlsDto.py" />
-    <Compile Include="Props\StaticProps.py" />
-    <Compile Include="Scraper\DataScraper.py" />
-    <Compile Include="Startup.py" />
+    <Compile Include="MarketWebScraping\BusinessServices\BusinessService.py" />
+    <Compile Include="MarketWebScraping\DataRepository\BaseRepository.py" />
+    <Compile Include="MarketWebScraping\DataRepository\DataServices.py" />
+    <Compile Include="MarketWebScraping\DataSet\DataSet.py" />
+    <Compile Include="MarketWebScraping\FileServices\FileServices.py" />
+    <Compile Include="MarketWebScraping\Helpers\DataHelper.py" />
+    <Compile Include="MarketWebScraping\Helpers\SMTPMailHelper.py" />
+    <Compile Include="MarketWebScraping\Helpers\StringHelper.py" />
+    <Compile Include="MarketWebScraping\Logger\LogManager.py" />
+    <Compile Include="MarketWebScraping\Models\HtmlResponse.py" />
+    <Compile Include="MarketWebScraping\Models\ProductDetailDto.py" />
+    <Compile Include="MarketWebScraping\Models\ProductListItemUrlsDto.py" />
+    <Compile Include="MarketWebScraping\Models\ProductUrlsDto.py" />
+    <Compile Include="MarketWebScraping\Props\StaticProps.py" />
+    <Compile Include="MarketWebScraping\Scraper\DataScraper.py" />
+    <Compile Include="MarketWebScraping\Startup.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".env" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessServices\" />
-    <Folder Include="DataRepository\" />
-    <Folder Include="DataSet\" />
-    <Folder Include="FileServices\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Logger\" />
-    <Folder Include="Models\" />
-    <Folder Include="Props\" />
-    <Folder Include="Scraper\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Interpreter Include="..\BileklerWebScraping\BileklerWebScraping\env2\">
+      <Id>env2</Id>
+      <Version>3.10</Version>
+      <Description>env2 (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env1\">
       <Id>env1</Id>
       <Version>3.10</Version>
@@ -64,6 +63,18 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MarketWebScraping\" />
+    <Folder Include="MarketWebScraping\BusinessServices\" />
+    <Folder Include="MarketWebScraping\DataRepository\" />
+    <Folder Include="MarketWebScraping\DataSet\" />
+    <Folder Include="MarketWebScraping\FileServices\" />
+    <Folder Include="MarketWebScraping\Helpers\" />
+    <Folder Include="MarketWebScraping\Logger\" />
+    <Folder Include="MarketWebScraping\Models\" />
+    <Folder Include="MarketWebScraping\Props\" />
+    <Folder Include="MarketWebScraping\Scraper\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
