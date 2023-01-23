@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MarketPaketiWebScraper", "MarketPaketiWebScraper.pyproj", "{CD205F01-1207-4773-A6BF-131E37CB0855}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MarketPaketiWebScraper", "MarketPaketiWebScraper\MarketPaketiWebScraper.pyproj", "{CD205F01-1207-4773-A6BF-131E37CB0855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

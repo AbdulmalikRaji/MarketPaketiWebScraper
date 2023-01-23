@@ -39,7 +39,7 @@ async def main():
         #Dispose the warnings on console window
         warnings.filterwarnings("ignore")
         init_logging(log_file="logdata.log",append=True, console_loglevel=logging.INFO);
-        LM.LogManager.logMessage("PROCESS STARTED - Bilekler MARKET", LM.LogType.INFO);
+        LM.LogManager.logMessage("PROCESS STARTED - MARKET Paketi", LM.LogType.INFO);
 
         startDateTime = datetime.now()
         ###Check Upload Directory

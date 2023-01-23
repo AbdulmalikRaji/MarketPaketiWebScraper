@@ -2,9 +2,9 @@ from decouple import config
 from datetime import datetime
 
 class APIRoutes(object):
-    base_sitemap = 'https://www.altunbilekler.com/sitemap.xml'
+    base_sitemap = 'https://www.marketpaketi.com.tr/sitemap.xml'
     #base_product_list_sitemap_url = 'https://www.cagri.com/sitemap/products/'
-    base_url = 'https://www.altunbilekler.com'
+    base_url = 'https://www.marketpaketi.com.tr'
 
 class EmailProps(object):
     base_email_account = config('userAccount',default='')
